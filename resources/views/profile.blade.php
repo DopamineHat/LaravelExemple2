@@ -15,7 +15,7 @@
                 code postal: {{$user->postal}} <br />
                 status: {{$user->type}} <br />
                 credits: {{$user->credit}} <br />
-                @if ($user->credit > 10)
+                @if ($user->credit > 9)
                     <h1> Vous avez assez de credits pour profiter pleinement de notre offre 😃 </h1>
                 @else
                     <h1> Pensez à recharger vos credits 😢 </h1>

@@ -101,7 +101,7 @@
                         <div class="form-group row">
                             <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('Admin') }}</label>
                             <div class="col-md-6">
-                                <input id="type" type="checkbox" name="type">
+                                <input id="type" type="checkbox" name="type[]" value="admin">
                             </div>
                         </div>
                         <div class="form-group row mb-0">

@@ -134,9 +134,4 @@ class UserController extends Controller
         $users = User::all();
         return view('edit_byid', compact('users'));
     }
-    public function edit_own()
-    {
-        $user = Auth()->user();
-        return view('edit_own', compact('user'));
-    }
 }
