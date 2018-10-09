@@ -27,6 +27,6 @@ class IsAdmin
         }
         else if($request->path() == "premium" && $user->credit > 0)
             return $next($request);
-        return redirect('home');
+        return abort(403, 'Unauthorized.');
     }
 }

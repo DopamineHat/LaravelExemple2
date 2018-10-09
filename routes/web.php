@@ -27,8 +27,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/{user}/destroy', 'UserController@destroyForm')->middleware('auth')->middleware('is_admin');
 Route::get('/premium/credit', 'CreditController@updateCredit')->middleware('auth');
 Route::resource('/users', 'UserController')->middleware('auth')->middleware('is_admin');
-Route::get('/users_list', 'UserController@list')->name('users_list')->middleware('auth')->middleware('is_admin');
+Route::get('/users_list', 'UserController@list')->name('users_list')->middleware('auth');
 Route::get('/users_all', 'UserController@all')->name('users_all')->middleware('auth')->middleware('is_admin');
 Route::get('/delete_user_by_id', 'UserController@delbyid')->name('delete_byid')->middleware('auth')->middleware('is_admin');
 Route::get('/edit_user_by_id', 'UserController@edibyid')->name('edit_byid')->middleware('auth')->middleware('is_admin');
-Route::get('/profile/', 'UserController@own')->name('profile')->middleware('auth');
+Route::get('/profile', 'UserController@own')->name('profile')->middleware('auth');
+Route::get('/edit_own', 'UserController@edit_own')->name('edit_own')->middleware('auth');
+

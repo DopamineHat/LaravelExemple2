@@ -14,7 +14,6 @@ class UserController extends Controller
      */
     public function index()
     {
-    $admins = User::where('type', 'member')->get()->all();
     $users = User::all();
     foreach ($users as $user) {
         echo $user->name . '<br />';
@@ -67,7 +66,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
      //   dd($user);
-        return view('edit', compact('user'));
+         return view('edit', compact('user'));
     }
 
     /**
@@ -134,5 +133,10 @@ class UserController extends Controller
     {
         $users = User::all();
         return view('edit_byid', compact('users'));
+    }
+    public function edit_own()
+    {
+        $user = Auth()->user();
+        return view('edit_own', compact('user'));
     }
 }

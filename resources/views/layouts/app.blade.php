@@ -74,6 +74,9 @@
                                     <a class="dropdown-item" href="{{ route('premium') }}" type="button">
                                        Page Premium
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('edit_own') }}" type="button">
+                                       Modifier ses informations
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
