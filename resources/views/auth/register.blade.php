@@ -99,9 +99,15 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('Admin') }}</label>
+                            <label for="admin" class="col-md-4 col-form-label text-md-right"></label>
                             <div class="col-md-6">
-                                <input id="type" type="checkbox" name="type[]" value="admin">
+                                <input id="type" type="checkbox" class="form-control{{ $errors->has('type') ? ' is-invalid' : '' }}" name="type[]" value="admin">
+                                <label for="admin">Admin</label>
+                                @if ($errors->has('type'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('type') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
                         <div class="form-group row mb-0">

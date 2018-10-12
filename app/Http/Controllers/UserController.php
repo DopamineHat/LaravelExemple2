@@ -82,9 +82,7 @@ class UserController extends Controller
 
         //
         $user->update($request->all());
-
-        $users = User::all();
-        return view('edit_byid', compact('users'));
+        return redirect('edit_user_by_id');
     }
 
     /**
@@ -101,8 +99,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
 
         $user->delete();
-        $users = User::all();
-        return view('delete_byid', compact('users'));
+        return redirect('delete_user_by_id');
     }
 
     public function destroyForm(User $user)
