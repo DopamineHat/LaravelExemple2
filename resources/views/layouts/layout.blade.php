@@ -95,6 +95,18 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 							</li>
 						</ul>
 					</li>
+					<li class="treeview @if($red == 'interface') active @else NULL @endif">
+						<a href="{{ route('interface') }}">
+							<i class="fab fa-buromobelexperte"></i>
+							<span>Interface</span>
+						</a>
+					</li>
+					<li class="treeview @if($red == 'edit_own') active @else NULL @endif">
+						<a href="{{ route('edit_own') }}">
+							<i class="fas fa-info"></i>
+							<span>Editer mes infos</span>
+						</a>
+					</li>
 				</ul>
 				<button type="button" class="btn btn-info btn-lg btn-block mt-5 w3ls-btn p-1 text-uppercase font-weight-bold" data-toggle="modal"
 				    aria-pressed="false" href="{{ route('logout') }}"
@@ -374,7 +386,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<div class="col-sm-4  footv3-left my-sm-0 my-5">
 									<h3 class="mb-3 w3f_title">Navigation Admin</h3>
 									<ul class="list-agileits">
-										<li class="my-3">
+										<li class="mb-3">
 											<a href="{{ route('edit_byid') }}">
 												Editer Utilisateur
 											</a>
@@ -384,9 +396,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 												Supprimer Utilisateur
 											</a>
 										</li>
-										<li>
+										<li  class="mb-3">
 											<a href="{{ route('users_all') }}">
 												ID et Em@il
+											</a>
+										</li>
+										<li>
+											<a href="{{ route('interface') }}">
+												Interface
 											</a>
 										</li>
 									</ul>
@@ -642,7 +659,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 <script 
 src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
+crossorigin="anonymous">
+</script>
+<script 
+src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js">
+</script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script src="js/lib/sweetalert/sweetalert.min.js"></script>
+<link rel="stylesheet" href="css/lib/sweetalert/sweetalert.css">
+<script src="{{ asset('js/app.js') }}"></script>
 @yield('js-content')
-
 </html>

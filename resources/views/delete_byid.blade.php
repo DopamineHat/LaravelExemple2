@@ -4,6 +4,7 @@
 @endsection
 @section('content')
 <ul class="sidebar-menu">
+<div class="panel-heading"><h2>Supprimer un membre</h2></div>
 <li class="treeview">
     <a href="#">
         <i class="fas fa-plus"></i>

@@ -49,44 +49,6 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 @endif
                             </li>
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('edit_byid') }}" type="button">
-                                       Editer un utilisateur par son nom
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('delete_byid') }}" type="button">
-                                       Supprimer un utilisateur par son nom
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('users_all') }}" type="button">
-                                       Montrer ID et Em@il des utilisateurs
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('users_list') }}" type="button">
-                                       Lister les utilisateurs
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('profile') }}" type="button">
-                                       Profil
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('premium') }}" type="button">
-                                       Page Premium
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('edit_own') }}" type="button">
-                                       Modifier ses informations
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
                         @endguest
                     </ul>
                 </div>

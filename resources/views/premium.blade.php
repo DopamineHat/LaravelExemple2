@@ -7,13 +7,13 @@
 <!--<iframe width="800" height="600" id="youtube"
 src="https://www.youtube.com/embed/qAmlzY-ypuU">
 </iframe> -->
-<button class="prem">payer 10 credits pour voir cette vidéo</button>
+<button class="btn btn-warning" id="prem">payer 10 credits pour voir cette vidéo</button>
 </div>
 @endsection
 @section('js-content')
 <script>
 	$( document ).ready(function() {
-    $(".prem").click(function() {
+    $("#prem").click(function() {
                     $('<iframe />');  // Create an iframe element
                     $('<iframe />', {
                         id: 'youtube',
@@ -32,7 +32,7 @@ src="https://www.youtube.com/embed/qAmlzY-ypuU">
 //     		console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
 // 		}
 					});
-					$(".prem").remove();
+					$("#prem").remove();
                 });
 	});
 </script>

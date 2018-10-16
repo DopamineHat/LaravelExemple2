@@ -2056,3 +2056,11 @@ h5.modal-title {
 }
 
 /* -- //Responsive code -- */
+
+#buttondt {
+    display: inline;
+}
+
+.hidden {
+    visibility: hidden;
+}

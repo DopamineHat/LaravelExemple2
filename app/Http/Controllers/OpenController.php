@@ -32,6 +32,6 @@ class OpenController extends Controller
     	$user = Auth::user();
         //
         $user->update($request->all());
-        return view('edit_own', compact('user'));
+        return redirect('edit_own');
     }
 }

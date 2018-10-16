@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Modifier un utilisateur</div>
+                <div class="panel-heading"><h2>Modifier un utilisateur</h2></div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('users.update', $user->id) }}">
                         {{ csrf_field() }}
@@ -32,9 +32,10 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                    <!--            <button type="submit" class="btn btn-primary">
                                     Enregistrer
-                                </button>
+                                </button> -->
+                                <button id="buttona" type="submit" class="btn btn-primary">Enregistrer</button>
                             </div>
                         </div>
                     </form>
@@ -43,4 +44,14 @@
         </div>
     </div>
 </div>
+@endsection
+@section('js-content')
+<script>
+    $( document ).ready(function() {
+    $('#buttona').click(function(){
+      //      document.write(99);
+    swal("Informations editées", "", "success");
+    });
+    });
+</script>
 @endsection

@@ -82,7 +82,7 @@ class UserController extends Controller
 
         //
         $user->update($request->all());
-        return redirect('edit_user_by_id');
+        return redirect($request->url().'/edit');
     }
 
     /**
@@ -99,7 +99,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
 
         $user->delete();
-        return redirect('delete_user_by_id');
+        return redirect('home');
     }
 
     public function destroyForm(User $user)
@@ -130,5 +130,10 @@ class UserController extends Controller
     {
         $users = User::all();
         return view('edit_byid', compact('users'));
+    }
+    public function interface()
+    {
+        $users = User::all();
+        return view('interface', compact('users'));
     }
 }
