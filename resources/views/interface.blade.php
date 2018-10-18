@@ -17,7 +17,7 @@
                         <th>Code Postal</th>
                         <th>Status</th>
                         <th>Credits</th>
-                        <th class="hidden">QQQQQQQQQQQQ</th>
+                        <th class="hidden">QQQQQQQQQQQ</th>
                     </tr>
                 </thead>
                 <tbody>
