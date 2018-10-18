@@ -2104,3 +2104,50 @@ h5.modal-title {
     background: #4CAF50;
     cursor: pointer;
 }
+
+.statistic {
+  margin: 1em 0;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.statistic .value {
+  font-size: 4em;
+  line-height: 1em;
+  text-align: center;
+}
+.statistic .value.text {
+  font-size: 2em;
+  font-weight: bold;
+}
+.statistic .value img {
+  max-height: 0.8em;
+  vertical-align: baseline;
+}
+.statistic .label {
+  color: inherit;
+  display: block;
+  font-size: 1em;
+  text-align: center;
+}
+.statistic + .statistic {
+  margin-left: 1.5em;
+}
+
+.statistic .primary {
+  color: #337ab7;
+}
+.statistic .success {
+  color: #5cb85c;
+}
+.statistic .info {
+  color: #5bc0de;
+}
+.statistic .warning {
+  color: #f0ad4e;
+}
+.statistic .danger {
+  color: #d9534f;
+}
+.statistic .inverted {
+  color: white;
+}
