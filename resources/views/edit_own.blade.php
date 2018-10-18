@@ -25,7 +25,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-16 col-md-offset-16">
-                                <button id="buttona" type="submit" class="btn btn-success"">Enregistrer</button>
+                                <button id="buttona" type="submit" class="btn btn-success">Enregistrer</button>
                             </div>
                         </div>
                     </form>

@@ -13,6 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta charset="utf-8">
 	<meta name="keywords" content="Communal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -22,18 +23,19 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			window.scrollTo(0, 1);
 		}
 	</script>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="{{ asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
 
 	<!-- Custom CSS -->
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="{{ asset('css/style.css') }}" rel='stylesheet' type='text/css' />
 	<!-- font-awesome icons -->
-	<link href="css/fontawesome-all.min.css" rel="stylesheet">
+	<link href="{{ asset('css/fontawesome-all.min.css') }}" rel="stylesheet">
 	<!-- //Custom Theme files -->
 
 	<!-- side nav css file -->
-	<link href='css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css' />
+	<link href="{{ asset('css/SidebarNav.min.css') }}" media='all' rel='stylesheet' type='text/css' />
 	<!-- //side nav css file -->
 	<!--webfonts-->
 	<!-- logo -->
@@ -43,6 +45,12 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	<!-- body -->
 	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
 	<!--//webfonts-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/FontAwesome.otf">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.eot">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.svg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.ttf">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.woff">
 </head>
 <body class="cbp-spmenu-push">
 	@php($red = Route::current()->getName())
