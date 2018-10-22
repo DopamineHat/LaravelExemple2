@@ -25,6 +25,8 @@ class HomeController extends Controller
     public function index()
     {
         $total = 0;
+        $cntpoor = 0;
+        $richuser = 0;
         $users = User::all();
         $usercount = User::all()->count();
         $admincount = User::all()->where('type', '=', 'admin')->count();
@@ -32,7 +34,15 @@ class HomeController extends Controller
         foreach ($users as $user)
         {
             $total += $user->credit;
+            if ($richuser < $user->credit)
+            {
+                $richuser = $user->credit;
+            }
+            if ($user->credit < 10)
+                $cntpoor++;
         }
-        return view('home', compact('users','usercount','total','admincount','membercount'));
+        $avgcredit = intval($total / $usercount);
+        $peradmin = round(($admincount / $usercount * 100), 2);
+        return view('home', compact('users','usercount','total','admincount','membercount', 'avgcredit', 'peradmin', 'richuser', 'cntpoor'));
     }
 }

@@ -122,7 +122,6 @@ $('#buttona').click(function(e) {
             'success',
             )
             
-            
         } else if (
             // Read more about handling dismissals
             result.dismiss === swal.DismissReason.cancel
