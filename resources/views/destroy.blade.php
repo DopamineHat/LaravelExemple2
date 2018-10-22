@@ -10,11 +10,9 @@
                 <div class="panel-heading"><h2>Supprimer un utilisateur</h2></div>
                 <div class="panel-body">
                     <form class="form-horizontal">
-                <!--        {{ csrf_field() }} -->
-                <!--        {{ method_field('DELETE') }} -->
                         <div class="form-group">
                             <div class="col-md-16 col-md-offset-16">
-                                <button id="buttona" class="btn btn-warning" href="{{ route('users.destroy', $user->id) }}" data-toggle="tooltip">Supprimer l'utilisateur {{ $user->name }}</button>
+                                <button id="buttona" class="btn btn-warning" data-toggle="tooltip">Supprimer l'utilisateur {{ $user->name }}</button>
                             </div>
                         </div>
                     </form>
@@ -115,8 +113,8 @@ $('#buttona').click(function(e) {
     .then((result) => {
         if (result.value) {
                 $.ajax({
-                        url: "{{ route('users.destroy', $user->id) }}",
-                        method: 'DELETE',
+                        url: '{{ route('destroyed' , $user->id) }}',
+                        type: 'GET',
                 })
             swal(
             'Supprimé',

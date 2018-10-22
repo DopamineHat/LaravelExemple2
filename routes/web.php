@@ -25,6 +25,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/premium', 'PremiumController@access')->name('premium')->middleware('auth')->middleware('is_admin');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/{user}/destroy', 'UserController@destroyForm')->middleware('auth')->middleware('is_admin');
+Route::get('/users/{user}/destroyed', 'UserController@destroy')->name('destroyed')->middleware('auth')->middleware('is_admin');
 Route::get('/premium/credit', 'OpenController@updateCredit')->middleware('auth');
 Route::resource('/users', 'UserController')->middleware('auth')->middleware('is_admin');
 Route::get('/users_list', 'UserController@list')->name('users_list')->middleware('auth');

@@ -95,7 +95,6 @@ class UserController extends Controller
     {
        // $tmp = new User;
        // $user = $tmp->findOrFail($id);
-
         $user = User::findOrFail($id);
 
         $user->delete();
