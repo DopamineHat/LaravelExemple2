@@ -8,10 +8,6 @@
         <div class="col-md-8">
             <div class="primary">
               <div class="container">
-                
-                <h2><br />Statistiques<br /></h2>
-                <p>Statistique des utilisateurs</p>
-
                 <div class="panel panel-default">
                   <div class="panel-body">
                     <div class="row">
@@ -19,8 +15,8 @@
                         <div class="card">
                         <div class="statistic">
                         <div class="primary">
-                          <div class="value">{{ $count }}</div>
-                          <div class="label">Nombre d utilisateurs</div>
+                          <div class="value">{{ $usercount }}</div>
+                          <div class="label">Nombre d' utilisateurs</div>
                         </div><!-- /.statistic -->
                         </div>
                         </div>
@@ -40,7 +36,7 @@
                         <div class="statistic">
                         <div class="success">
                           <div class="value">{{ $admincount }}</div>
-                          <div class="label">Nombre d administrateurs</div>
+                          <div class="label">Nombre d' administrateurs</div>
                         </div>
                         </div><!-- /.statistic -->
                       </div><!-- /.col -->

@@ -26,13 +26,13 @@ class HomeController extends Controller
     {
         $total = 0;
         $users = User::all();
-        $count = User::all()->count();
+        $usercount = User::all()->count();
         $admincount = User::all()->where('type', '=', 'admin')->count();
         $membercount = User::all()->where('type', '=', 'member')->count();
         foreach ($users as $user)
         {
             $total += $user->credit;
         }
-        return view('home', compact('users','count','total','admincount','membercount'));
+        return view('home', compact('users','usercount','total','admincount','membercount'));
     }
 }
