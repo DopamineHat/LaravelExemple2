@@ -53,10 +53,9 @@
 <script>
     $( document ).ready(function() {
     $('#buttona').click(function(c){
-    c.preventDefault();
+    //c.preventDefault();
       //      document.write(99);
     swal("Informations editées", "", "success");
-    });
     });
     var slider = document.getElementById("credit");
     var output = document.getElementById("demo");
@@ -65,5 +64,6 @@
     slider.oninput = function() {
         output.innerHTML = this.value;
     }
+    });
 </script>
 @endsection

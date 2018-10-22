@@ -39,7 +39,7 @@
 <script>
     $( document ).ready(function() {
     $('#buttona').click(function(e){
-    e.preventDefault();
+    //e.preventDefault();
       //      document.write(99);
     swal("Informations editées", "", "success");
     });
