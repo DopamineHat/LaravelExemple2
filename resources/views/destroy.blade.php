@@ -12,7 +12,7 @@
                     <form class="form-horizontal">
                         <div class="form-group">
                             <div class="col-md-16 col-md-offset-16">
-                                <button id="buttona" class="btn btn-warning" data-toggle="tooltip">Supprimer l'utilisateur {{ $user->name }}</button>
+                                <button id="buttona" class="btn btn-warning">Supprimer l'utilisateur {{ $user->name }}</button>
                             </div>
                         </div>
                     </form>
