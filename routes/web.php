@@ -36,5 +36,3 @@ Route::get('/profile', 'UserController@own')->name('profile')->middleware('auth'
 Route::get('/edit_own', 'OpenController@edit_own')->name('edit_own')->middleware('auth');
 Route::get('/interface', 'UserController@interface')->name('interface')->middleware('auth')->middleware('is_admin');
 Route::post('/edit_own/update', 'OpenController@openUpdate')->name('update_own')->middleware('auth');
-
-
