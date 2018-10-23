@@ -27,11 +27,14 @@ class HomeController extends Controller
         $totalcredit = 0;
         $cntpoor = 0;
         $veryrichuser = 0;
-        $richcredit = 0;
+        $totalveryrichcredit = 0;
         $totalrichcredit = 0;
-        $richcreditcnt = 0;
+        $veryrichcreditcnt = 0;
+        $totaverypoorcredit = 0;
         $totalpoorcredit = 0;
+        $verypoorcreditcnt = 0;
         $poorcreditcnt = 0;
+        $richcreditcnt = 0;
         $users = User::all();
         $usercount = User::all()->count();
         $admincount = User::all()->where('type', '=', 'admin')->count();
@@ -47,22 +50,28 @@ class HomeController extends Controller
         }
         sort($userscredit);        
         foreach ($userscredit as $usercredit)
-            if ($totalpoorcredit < ($totalcredit / 20))
+            if ($totalpoorcredit < ($totalcredit / 1.25))
             {
                 $totalpoorcredit += $usercredit;
                 $poorcreditcnt++;
+                if ($totalpoorcredit < ($totalcredit / 20))
+                    $verypoorcreditcnt++;
             }
         rsort($userscredit);
         foreach ($userscredit as $usercredit)
-            if ($totalrichcredit < ($totalcredit / 20))
+            if ($totalrichcredit < ($totalcredit / 1.25))
             {
                 $totalrichcredit += $usercredit;
                 $richcreditcnt++;
+                if ($totalrichcredit < ($totalcredit / 20))
+                    $veryrichcreditcnt++;
             }
+        $veryrichcreditcntpct = round($veryrichcreditcnt / $usercount * 100, 2);
+        $verypoorcreditcntpct = round($verypoorcreditcnt / $usercount * 100, 2);
         $richcreditcntpct = round($richcreditcnt / $usercount * 100, 2);
         $poorcreditcntpct = round($poorcreditcnt / $usercount * 100, 2);
         $avgcredit = intval($totalcredit / $usercount);
         $peradmin = round($admincount / $usercount * 100, 2);
-        return view('home', compact('users','usercount','totalcredit','admincount','membercount', 'avgcredit', 'peradmin', 'veryrichuser', 'cntpoor', 'cntrich', 'richcredit', 'totalrichcredit', 'richcreditcntpct', 'poorcreditcntpct'));
+        return view('home', compact('users','usercount','totalcredit','admincount','membercount', 'avgcredit', 'peradmin', 'veryrichuser', 'cntpoor', 'cntrich', 'richcredit', 'totalrichcredit', 'veryrichcreditcntpct', 'verypoorcreditcntpct', 'richcreditcntpct', 'poorcreditcntpct'));
     }
 }

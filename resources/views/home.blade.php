@@ -97,7 +97,7 @@
                         <div class="statistic">
                         <div class="primary">
                           <div class="label">Utilisateurs les plus riches possedant 5% des crédits</div>
-                          <div class="value">{{ $richcreditcntpct }} %</div>
+                          <div class="value">{{ $veryrichcreditcntpct }} %</div>
                         </div>
                         </div>
                         </div><!-- /.statistic -->
@@ -105,8 +105,28 @@
                       <div class="col-sm-6">
                         <div class="statistic">
                         <div class="info">
-                          <div class="label">Utilisateurs les plus pauvres possedant 5% des crédits</div>
+                          <div class="value">{{ $verypoorcreditcntpct }} %</div>
+                          <div class="label">Des utilisateurs les plus pauvres possedent 5% des crédits</div>
+                        </div>
+                        </div><!-- /.statistic -->
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="statistic">
+                        <div class="success">
+                          <div class="label">Utilisateurs les plus riches possedant 80% des crédits</div>
+                          <div class="value">{{ $richcreditcntpct }} %</div>
+                        </div>
+                        </div><!-- /.statistic -->
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="card">
+                        <div class="statistic">
+                        <div class="warning">
                           <div class="value">{{ $poorcreditcntpct }} %</div>
+                          <div class="label">Des utilisateurs les plus pauvres possedent 80% des crédits</div>
+                        </div>
                         </div>
                         </div><!-- /.statistic -->
                       </div>
