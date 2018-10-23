@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('type', ['admin','member'])->default('member');
-            $table->integer('credit')->default(100);
+            $table->integer('credit')->default(random_int(0,1000));
             $table->string('address')->default('undefined');
             $table->integer('postal')->default(0);
             $table->string('city')->default('undefined');

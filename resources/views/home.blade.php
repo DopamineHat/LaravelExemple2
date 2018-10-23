@@ -26,7 +26,7 @@
                         <div class="statistic">
                         <div class="warning">
                           <div class="label">Total des crédits</div>
-                          <div class="value">{{ $total }}</div>
+                          <div class="value">{{ $totalcredit }}</div>
                         </div>
                         </div><!-- /.statistic -->
                       </div><!-- /.col -->
@@ -75,7 +75,7 @@
                       <div class="col-sm-6">
                         <div class="statistic">
                         <div class="warning">
-                          <div class="value">{{ $richuser }}</div>
+                          <div class="value">{{ $veryrichuser }}</div>
                           <div class="label">Balance la plus élevée</div>
                         </div>
                         </div><!-- /.statistic -->
@@ -84,12 +84,33 @@
                         <div class="card">
                         <div class="statistic">
                         <div class="danger">
-                          <div class="value">{{ $cntpoor }}</div>
                           <div class="label">Membres avec trop peu de crédits</div>
+                          <div class="value">{{ $cntpoor }}</div>
                         </div>
                         </div>
                         </div><!-- /.statistic -->
                       </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="card">
+                        <div class="statistic">
+                        <div class="primary">
+                          <div class="label">Utilisateurs les plus riches possedant 5% des crédits</div>
+                          <div class="value">{{ $richcreditcntpct }} %</div>
+                        </div>
+                        </div>
+                        </div><!-- /.statistic -->
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="statistic">
+                        <div class="info">
+                          <div class="label">Utilisateurs les plus pauvres possedant 5% des crédits</div>
+                          <div class="value">{{ $poorcreditcntpct }} %</div>
+                        </div>
+                        </div><!-- /.statistic -->
+                      </div>
+                    </div>
                     </div>
                   </div><!-- /.panel-body -->
                 </div><!-- /.panel -->
