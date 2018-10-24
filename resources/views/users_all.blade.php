@@ -3,8 +3,8 @@
 	Informations sur les Utilisateurs
 @endsection
 @section('content')
-<div class="row py-lg-5 pt-md-5 pt-3 d-flex justify-content-center">
    @foreach ($users as $user)
+<div class="row py-lg-5 pt-md-5 pt-3 d-flex justify-content-center">
         <div class="card col-lg-3 col-md-6 border-0">
             <div class="card-body bg-light">
                 <div class="card-img-top pt-3">
@@ -16,6 +16,6 @@
                 </p>
             </div>
         </div>
-    @endforeach
 </div>
+@endforeach
 @endsection

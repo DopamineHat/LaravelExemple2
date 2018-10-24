@@ -50,20 +50,20 @@ class HomeController extends Controller
         }
         sort($userscredit);        
         foreach ($userscredit as $usercredit)
-            if ($totalpoorcredit < ($totalcredit / 1.25))
+            if ($totalpoorcredit < ($totalcredit * .8))
             {
                 $totalpoorcredit += $usercredit;
                 $poorcreditcnt++;
-                if ($totalpoorcredit < ($totalcredit / 20))
+                if ($totalpoorcredit < ($totalcredit * .05))
                     $verypoorcreditcnt++;
             }
         rsort($userscredit);
         foreach ($userscredit as $usercredit)
-            if ($totalrichcredit < ($totalcredit / 1.25))
+            if ($totalrichcredit < ($totalcredit * .8))
             {
                 $totalrichcredit += $usercredit;
                 $richcreditcnt++;
-                if ($totalrichcredit < ($totalcredit / 20))
+                if ($totalrichcredit < ($totalcredit * .05))
                     $veryrichcreditcnt++;
             }
         $veryrichcreditcntpct = round($veryrichcreditcnt / $usercount * 100, 2);
@@ -72,6 +72,7 @@ class HomeController extends Controller
         $poorcreditcntpct = round($poorcreditcnt / $usercount * 100, 2);
         $avgcredit = intval($totalcredit / $usercount);
         $peradmin = round($admincount / $usercount * 100, 2);
-        return view('home', compact('users','usercount','totalcredit','admincount','membercount', 'avgcredit', 'peradmin', 'veryrichuser', 'cntpoor', 'cntrich', 'richcredit', 'totalrichcredit', 'veryrichcreditcntpct', 'verypoorcreditcntpct', 'richcreditcntpct', 'poorcreditcntpct'));
+        $cntpoorpct = round($cntpoor / $usercount * 100, 2);
+        return view('home', compact('users','usercount','totalcredit','admincount','membercount', 'avgcredit', 'peradmin', 'veryrichuser', 'cntpoorpct', 'cntrich', 'richcredit', 'totalrichcredit', 'veryrichcreditcntpct', 'verypoorcreditcntpct', 'richcreditcntpct', 'poorcreditcntpct'));
     }
 }

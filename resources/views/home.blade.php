@@ -15,13 +15,12 @@
                         <div class="card">
                         <div class="statistic">
                         <div class="primary">
-                          <div class="value">{{ $usercount }}</div>
                           <div class="label">Nombre d' utilisateurs</div>
+                          <div class="value">{{ $usercount }}</div>
                         </div><!-- /.statistic -->
                         </div>
                         </div>
                       </div><!-- /.col -->
-
                       <div class="col-sm-6">
                         <div class="statistic">
                         <div class="warning">
@@ -35,8 +34,8 @@
                       <div class="col-sm-6">
                         <div class="statistic">
                         <div class="success">
-                          <div class="value">{{ $admincount }}</div>
-                          <div class="label">Nombre d' administrateurs</div>
+                          <div class="value">{{ $peradmin }} %</div>
+                          <div class="label">Sont administrateurs</div>
                         </div>
                         </div><!-- /.statistic -->
                       </div><!-- /.col -->
@@ -65,8 +64,8 @@
                       <div class="col-sm-6">
                         <div class="statistic">
                         <div class="success">
-                          <div class="value">{{ $peradmin }} %</div>
-                          <div class="label">Pourcentage d' administrateurs</div>
+                          <div class="value">{{ $admincount }}</div>
+                          <div class="label">Nombre d' administrateurs</div>
                         </div>
                         </div><!-- /.statistic -->
                       </div><!-- /.col -->
@@ -85,7 +84,7 @@
                         <div class="statistic">
                         <div class="danger">
                           <div class="label">Membres avec trop peu de crédits</div>
-                          <div class="value">{{ $cntpoor }}</div>
+                          <div class="value">{{ $cntpoorpct }} %</div>
                         </div>
                         </div>
                         </div><!-- /.statistic -->

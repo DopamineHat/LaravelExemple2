@@ -382,9 +382,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 												Liste
 											</a>
 										</li>
-										<li>
+										<li class="mb-3">
 											<a href="{{ route('profile') }}">
 												Profil
+											</a>
+										</li>
+										<li>
+											<a href="{{ route('edit_own') }}">
+												Editer Mes Infos
 											</a>
 										</li>
 									</ul>
